@@ -69,7 +69,7 @@ p{
 
 .slider-section {
     position: relative;
-    background: #000;
+    margin-top: -20px;
 }
 
 .slider {
@@ -556,7 +556,6 @@ path {
   
 }
  
-
 @media (min-width: 992px) {
 
     .navbar-brand {
