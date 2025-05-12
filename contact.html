@@ -1,3 +1,4 @@
+
 <!DOCTYPE html><html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,113 @@
   <link href="css/bootstrap.min.css" rel="stylesheet" >
   <link rel="stylesheet" href="css/style.css">
 
+  <style type="text/css">
+
+
+.btn-primary {
+  background-color: #2563eb;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 20px;
+  gap: 40px;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+}
+
+.contact-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: #c9d1d9;
+}
+
+.contribute button {
+  display: block;
+  background: none;
+  border: none;
+  color: #58a6ff;
+  cursor: pointer;
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: #c9d1d9;
+  font-size: 1.2rem;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 250px;
+  max-width: 600px;
+  background-color: #161b22;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: #0d1117;
+  color: #fff;
+}
+
+textarea {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  resize: vertical;
+  background-color: #0d1117;
+  color: #fff;
+}
+
+button[type="submit"] {
+  background-color: #2563eb;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+
+</style>
+
 </head>
 
 <body>
@@ -18,7 +126,7 @@
     class="w-100 position-fixed top-0 start-0 hero-video"></video> -->
 
   <!-- navbar start -->
-  <nav class="navbar navbar-expand-lg navbar-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: black;">
     <div class="container-fluid px-4">
       <a class="navbar-brand" href="#">
         <img class="px-3 pt-2" src="images/logo.svg" alt="Younoh Media" width="50%">
@@ -54,45 +162,41 @@
     <img src="images/social-whatsapp.svg" width="80%">
   </a>
 
-  <!-- hero secton start -->
-  <section class="hero position-relative">
-    <video src="media/web_4.mp4" autoplay="" loop="" muted="" class="w-100 position-fixed top-0 start-0 hero-video"></video>
-    <div class="container hero-container">
-      <div class="text-white text-center mt-5 d-flex flex-column justify-content-center align-items-center hero-position">
-        <div class="overflow-hidden w-75 m-auto">
-          <h4 class="display-2 m-auto mb-3 ">
-            Pushing the boundaries of <br>
-            creativity to deliver value to our clients.
-          </h4>
-        </div>
-        <button class="btn btn-outline-light btn-lg mt-3 rounded-0 mb-5 hero-btn" type="button">
-          Get in touch
-        </button>
-      </div>
-    </div>
-  </section>
-  <!-- hero secton end -->
+   
 
-   <!-- vision section start -->
-  <section class="vision">
-    <div class="container vision-container">
-      <div class="position-relative d-flex flex-column justify-content-center align-items-center text-white text-center">
-        <h1 class="display-2 vision-title" style="color:#B80F0A;">Younoh Media</h1>
-        <h1 class="vision-title">Cutting edge full funnel marketing with our clients results as core driver.</h1>
-        <div class="row p-2 mt-3">
-          <div class="col-md-5" style="background-color:#B80F0A;"></div>
-          <div class="col-md-7 p-3">
-            <p class="text-start">We are not a “me too” kind of marketing agency, we stand for top quality creative and marketing work which actually delivers returns to our clients.</p><br>
-             <p class="text-start">For us, marketing can never be a business cost, but rather an investment. As any good investment, we deliver positive ROI to every of our clients, in an ethical and professional manner. No fuzzy promises or shady guarantees.</p><br>
-             <p class="text-start">
-               We work only clients and brands we believe in, and we find untapped potential on, and for those we deliver marketing the client wants, but also propose what the client needs. We do it thanks to our holistic view of marketing - we are not a “simple” provider of Social Media Management. We are a one stop shop for complete marketing plans, fully tailored to the unique needs, concerns and goals of each client and brand, and dynamically leveraged on bid data analytics and AI.
-             </p>
+   <section class="contact-section  vision">
+        <div class="container">
+          <div class="row mt-3">
+            <div class="col-md-6">
+            <div class="contact-info">
+              <h2>Contact us</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipiscing elit amet diam in est pharetra porttitor libero netus nulla tempor</p>
+              <div class="contribute">
+                <button>🔗 Contribute on GitHub</button>
+                <button>💬 Join our community</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="contact-form">
+            <form id="form">
+              <div class="input-group">
+                <input type="text" name="name" placeholder="Name" required />
+                <input type="email" name="email" placeholder="Email" required />
+              </div>
+              <div class="input-group">
+                <input type="text" name="phone" placeholder="Phone" />
+                <input type="text" name="subject" placeholder="Subject" />
+              </div>
+              <textarea name="message" rows="5" placeholder="Type your message here..." required></textarea>
+              <button type="submit" class="btn-primary">Send message</button>
+            </form>
+          </div>
+          </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <!-- vision section end-->
+    </section>
+
 
   <!-- footer start -->
   <section class="footer">
@@ -173,5 +277,6 @@
 
   <script src="js/script.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>
