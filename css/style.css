@@ -115,6 +115,14 @@ p{
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    background-image: url(../images/logo-light.svg);
+}
+
+.vision-container1 {
+    padding: 7rem 0;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
 }
 
 .vision-title {
@@ -203,7 +211,7 @@ path {
 }
 
 .partner h1 {
-    font-size: 3rem;
+    font-size: 4rem;
     font-weight: 400;
     margin-bottom: 3rem;
     width: 70%;
@@ -558,6 +566,10 @@ path {
         width: 30%
     }
 
+    .display-2{
+        font-weight: 600;
+    }
+
     .hero {
         padding: 0 5rem 5rem;
     }
@@ -575,6 +587,10 @@ path {
     }
 
     .vision-container {
+        padding: 15rem 0;
+    }
+
+     .vision-container1 {
         padding: 15rem 0;
     }
 
@@ -692,6 +708,7 @@ path {
 @media screen and (min-width: 320px) and (max-width: 540px){
     .display-2{
         font-size: calc(1.575rem + 2.9vw) !important;
+        font-weight: 600;
     }
 
     .underline-partner {
@@ -728,7 +745,7 @@ path {
 
 @media (max-width: 768px) {
     body {
-font-family: "Manrope", sans-serif !important;
+        font-family: "Manrope", sans-serif !important;
     }
 }
 

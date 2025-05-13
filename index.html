@@ -125,8 +125,8 @@
   </section>
   <!-- video slider end -->
 
-  <!-- vision section start 
-  <section class="vision" id="about">
+  <!-- vision section start -->
+  <section class="vision" >
     <div class="container vision-container">
       <div class="position-relative d-flex flex-column justify-content-center align-items-center text-white text-center">
         <h1 class="display-2 vision-title">Our Vision & Mission</h1>
@@ -142,7 +142,7 @@
       </div>
     </div>
   </section>
-  vision section end -->
+  <!--vision section end -->
 
   <!-- statatics section start -->
   <section class="statatics">
@@ -153,53 +153,13 @@
               <div data-aos="zoom-in-up">
                 <img src="images/client.svg">
               </div>
-              <h1><span id="client-count">0</span> Clients</h1>
+              <h1>100+ Clients</h1>
               <p>
                 Helping businesses
                 thrive through creative
                 digital solutions.
               </p>
             </div>
-            <script>
-              function animateCount(id, start, end, duration) {
-                const obj = document.getElementById(id);
-                let startTime = null;
-
-                function step(timestamp) {
-                  if (!startTime) startTime = timestamp;
-                  const progress = Math.min((timestamp - startTime) / duration, 1);
-                  obj.innerText = Math.floor(progress * (end - start) + start);
-
-                  if (progress < 1) {
-                    requestAnimationFrame(step);
-                  } else {
-                    obj.innerText = end + "+"; // Add '+' at the end
-                  }
-                }
-
-                requestAnimationFrame(step);
-              }
-
-              document.addEventListener("DOMContentLoaded", () => {
-                const target = document.getElementById("client-count");
-                let animated = false;
-
-                const observer = new IntersectionObserver(entries => {
-                  entries.forEach(entry => {
-                    if (entry.isIntersecting && !animated) {
-                      animateCount("client-count", 0, 100, 2000);
-                      animated = true; // Prevents it from triggering again
-                      observer.unobserve(target); // Stop observing
-                    }
-                  });
-                }, {
-                  threshold: 0.6 // Adjust depending on when you want it to trigger
-                });
-
-                observer.observe(target);
-              });
-            </script>
-
         </div>
         <div class="col">
           <div>
@@ -331,7 +291,7 @@
         <h1 class="display-3 fw-normal m-auto mb-5">
           Our partner in success
         </h1>
-        <svg class="underline-partner" viewBox="0 0 600 200">
+         <svg class="underline-partner" viewBox="0 0 600 200">
           <defs>
             <clipPath id="clip">
               <rect class="clip-rect" x="0" y="0" width="600" height="200"></rect>
@@ -375,64 +335,75 @@
   </section>
   <!-- partner section end -->
 
-  <!-- client logo slider start -->
-  <section class="client">
-    <div class="client-slider mt-5">
-      <div class="client-slide-track">
-        <div class="client-slide">
-          <img src="images/client-1.svg">
-        </div>
-        <div class="client-slide">
-          <img src="images/client-2.svg">
-        </div>
-        <div class="client-slide">
-          <img src="images/client-3.svg">
-        </div>
-        <div class="client-slide">
-          <img src="images/client-4.svg">
-        </div>
-        <div class="client-slide">
-          <img src="images/client-5.svg">
-        </div>
-        <div class="client-slide">
-          <img src="images/client-6.svg">
-        </div>
-        <div class="client-slide">
-          <img src="images/client-7.svg">
-        </div>
-        <div class="client-slide">
-          <img src="images/client-8.svg">
-        </div>
-        <div class="client-slide">
-          <img src="images/client-1.svg">
-        </div>
-        <div class="client-slide">
-          <img src="images/client-2.svg">
-        </div>
-        <div class="client-slide">
-          <img src="images/client-3.svg">
-        </div>
-        <div class="client-slide">
-          <img src="images/client-4.svg">
-        </div>
-        <div class="client-slide">
-          <img src="images/client-5.svg">
-        </div>
-        <div class="client-slide">
-          <img src="images/client-6.svg">
-        </div>
-        <div class="client-slide">
-          <img src="images/client-7.svg">
-        </div>
-        <div class="client-slide">
-          <img src="images/client-8.svg">
-        </div>
+ <!-- client logo grid start -->
+<section class="client py-5">
+  <div class="container">
+    <div class="row text-center">
+      <h1 class="text-white mb-5">
+          Our Cleints
+        </h1>
+      <div class="col-md-2 col-4 mb-4">
+        <img src="images/client-1.svg" class="img-fluid" alt="Client 1">
+      </div>
+      <div class="col-md-2 col-4 mb-4">
+        <img src="images/client-2.svg" class="img-fluid" alt="Client 2">
+      </div>
+      <div class="col-md-2 col-4 mb-4">
+        <img src="images/client-3.svg" class="img-fluid" alt="Client 3">
+      </div>
+      <div class="col-md-2 col-4 mb-4">
+        <img src="images/client-4.svg" class="img-fluid" alt="Client 4">
+      </div>
+      <div class="col-md-2 col-4 mb-4">
+        <img src="images/client-5.svg" class="img-fluid" alt="Client 5">
+      </div>
+      <div class="col-md-2 col-4 mb-4">
+        <img src="images/client-6.svg" class="img-fluid" alt="Client 6">
+      </div>
+
+      <div class="col-md-2 col-4 mb-4">
+        <img src="images/client-7.svg" class="img-fluid" alt="Client 7">
+      </div>
+      <div class="col-md-2 col-4 mb-4">
+        <img src="images/client-8.svg" class="img-fluid" alt="Client 8">
+      </div>
+      <div class="col-md-2 col-4 mb-4">
+        <img src="images/client-1.svg" class="img-fluid" alt="Client 1">
+      </div>
+      <div class="col-md-2 col-4 mb-4">
+        <img src="images/client-2.svg" class="img-fluid" alt="Client 2">
+      </div>
+      <div class="col-md-2 col-4 mb-4">
+        <img src="images/client-3.svg" class="img-fluid" alt="Client 3">
+      </div>
+      <div class="col-md-2 col-4 mb-4">
+        <img src="images/client-4.svg" class="img-fluid" alt="Client 4">
+      </div>
+
+      <div class="col-md-2 col-4 mb-4">
+        <img src="images/client-5.svg" class="img-fluid" alt="Client 5">
+      </div>
+      <div class="col-md-2 col-4 mb-4">
+        <img src="images/client-6.svg" class="img-fluid" alt="Client 6">
+      </div>
+      <div class="col-md-2 col-4 mb-4">
+        <img src="images/client-7.svg" class="img-fluid" alt="Client 7">
+      </div>
+      <div class="col-md-2 col-4 mb-4">
+        <img src="images/client-8.svg" class="img-fluid" alt="Client 8">
+      </div>
+      <div class="col-md-2 col-4 mb-4">
+        <img src="images/client-1.svg" class="img-fluid" alt="Client 1">
+      </div>
+      <div class="col-md-2 col-4 mb-4">
+        <img src="images/client-2.svg" class="img-fluid" alt="Client 2">
       </div>
     </div>
-  </section>
-  <!-- client logo slider end -->
+  </div>
+</section>
+<!-- client logo grid end -->
 
-  <!-- result section start -->
+  <!-- result section start 
   <section class="result">
     <div class="container">
       <div>
@@ -489,7 +460,7 @@
       </div>
     </div>
   </section>
-  <!-- result section end -->
+   result section end -->
 
   <!-- testimonials slider start -->
   <section class="testimonials" id="testimonial">
@@ -523,16 +494,16 @@
           </li>
           <li class="testimonials-slide">
             <div>
-              <h5 class="testimonials-underline">James Jhone</h5>
-              <p class="testimonials-name">CEO Crackles</p>
+              <h5 class="testimonials-underline">Nehal Jibouri</h5>
+              <p class="testimonials-name">General Manager ,Party World</p>
               <p class="testimonials-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magnaaliqua. Ut enim ad minim
-                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum.
+                I was really pleased with the work the team at Younoh Media 
+                Agency did for us across our Instagram and Facebook accounts. 
+                They listened closely to our requirements and developed content 
+                that aligned perfectly with our goals. The team was professional, 
+                courteous, and easy to work with throughout the process. 
+                I’d happily recommend them to anyone looking for solid social 
+                media support.
               </p>
             </div>
           </li>
@@ -593,12 +564,20 @@
     <div class="footer-upper">
       <div class="row">
         <!-- Map Column -->
-        <div class="col-md-6 mb-4">
-          
+        <div class="col-md-5 mb-4">
+            <img src="images/logo.svg" width="30%">
+            <div class="contact mt-3">
+              <div class="d-flex gap-4 align-items-center">
+                <p>+971552260555</p>
+                <p>info@younoh.com</p>
+              </div>
+              <p class="text-white-50">
+                Al Ameri Tower, Office 1807, Barsha Heights, Dubai, UAE
+              </p>
+          </div>
         </div>
-
         <!-- Footer Links Column -->
-        <div class="col-md-6">
+        <div class="col-md-7">
           <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
               <h3>Explore</h3>
@@ -627,23 +606,16 @@
           </div>
         </div>
       </div> <!-- end row -->
-
       <!-- Footer Lower Section -->
-      <div class="footer-lower mt-5">
-        <div class="d-flex flex-column flex-md-row justify-content-between gap-4">
+      <div class="footer-lower mt-5 justify-content-center text-center">
+        <div class="d-flex flex-column align-items-center gap-3">
           <div>
-            <img src="images/logo.svg" width="30%">
-            <div class="contact mt-3">
-              <div class="d-flex gap-4 align-items-center">
-                <p>+971552260555</p>
-                <p>info@younoh.com</p>
-              </div>
-              <p class="text-white-50">
-                Al Ameri Tower, Office 1807, Barsha Heights, Dubai, UAE
-              </p>
-            </div>
+            <p class="text-white-50 mb-0">
+              2025 Younoh Media<br>
+              All rights Reserved
+            </p>
           </div>
-          <div class="d-flex align-items-end gap-3">
+          <div class="d-flex gap-3 justify-content-center">
             <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
             <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
             <a href="#"><img src="images/twitter-alt.svg" alt="Twitter"></a>
@@ -653,7 +625,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
