@@ -27,7 +27,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto gap-3 z-1 position-relative">
-          <li class="nav-item"><a class="nav-link" href="index.html">Index</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
           <li class="nav-item">
@@ -65,12 +65,32 @@
         <p class="w-75 m-auto mb-5 text-center" style="font-size: 20px;">
           Marketing as the best investment of your brand
         </p>
-        <a class="btn btn-outline-light btn-lg mt-3 rounded-0 mb-5 hero-btn" type="button" href="contact.html">
+        <a class="btn btn-outline-light btn-lg mt-3 rounded-0 mb-5  hero-btn bounce-animation" type="button" href="contact.html">
           Get in touch
         </a>
       </div>
     </div>
   </section>
+  <script type="text/javascript">
+    // Wait for the DOM to fully load
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.querySelector('.hero-btn');
+
+  // Create an IntersectionObserver to detect when the button is in view
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Add the bounce animation when button comes into view
+        entry.target.classList.add('bounce-animation');
+      }
+    });
+  });
+
+  // Observe the button element
+  observer.observe(button);
+});
+
+  </script>
   <!-- hero secton end -->
 
   <!-- video slider start -->
@@ -281,7 +301,7 @@
             </div>
           </div>
         </div>
-        <a class="quote-button mt-5 text-decoration-none rounded-0" type="button" href="contact.html">Get in touch</a>
+        <a class="quote-button mt-5 text-decoration-none bounce-animation  rounded-0" type="button" href="contact.html">Get in touch</a>
       </div>
     </div>
   </section>
@@ -608,10 +628,10 @@
             </p>
           </div>
           <div class="d-flex gap-3 justify-content-center">
-            <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
-            <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
-            <a href="#"><img src="images/twitter-alt.svg" alt="Twitter"></a>
-            <a href="#"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://www.facebook.com/younohmedia"><img src="images/facebook.svg" alt="Facebook"></a>
+            <a href="https://www.instagram.com/younohmedia/"><img src="images/instagram.svg" alt="Instagram"></a>
+            <a href="https://www.tiktok.com/@younoh.media"><img src="images/tiktok.svg" alt="Twitter"></a>
+            <a href="https://www.linkedin.com/company/younoh-media/"><img src="images/linkedin.svg" alt="LinkedIn"></a>
             <!-- Uncomment below if you want to show WhatsApp -->
             <!-- <a href="#"><img src="./assets/img/icons/social-whatsapp.svg" width="50px" /></a> -->
           </div>

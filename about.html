@@ -43,7 +43,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto gap-3  z-1 position-relative">
-          <li class="nav-item"><a class="nav-link" href="index.html">Index</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
           <li class="nav-item">
@@ -98,7 +98,7 @@
         Cutting edge full funnel marketing with our clients results as core driver.
       </h1>
       <div class="row p-2 mt-3 align-items-center">
-        <div class="col-md-5 text-md-end p-5" data-aos="zoom-in-up"  data-aos-duration="2000">
+        <div class="col-md-5 text-md-end p-5" data-aos="zoom-in-up"  data-aos-duration="1000">
           <img src="images/imgabout.jpg" class="img-fluid rounded shadow" alt="About Image" style="max-height: 400px; object-fit: cover;">
         </div>
         <div class="col-md-7 p-3">
@@ -125,7 +125,7 @@
   <div class="container">
     <div class="row text-center">
       <h1 class="text-white mb-5">
-          Our Cleints
+          <div data-aos="fade-up" data-aos-duration="2000">Our Cleints</div>
         </h1>
       <div class="col-md-2 col-4 mb-4">
         <img src="images/client-1.svg" class="img-fluid" alt="Client 1">
@@ -185,6 +185,33 @@
       </div>
     </div>
   </div>
+
+  <div class="text-center p-5">
+    <h1 class="vision-title">
+      Have some questions?
+    </h1>
+   <a class="quote-button mt-5 text-decoration-none bounce-animation  rounded-0" type="button" href="contact.html">Get in touch</a>
+  </div>
+  <script type="text/javascript">
+    // Wait for the DOM to fully load
+document.addEventListener("DOMContentLoaded", function () {
+  const button = document.querySelector('.hero-btn');
+
+  // Create an IntersectionObserver to detect when the button is in view
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Add the bounce animation when button comes into view
+        entry.target.classList.add('bounce-animation');
+      }
+    });
+  });
+
+  // Observe the button element
+  observer.observe(button);
+});
+
+  </script>
 </section>
 <!-- client logo grid end -->
 
@@ -246,10 +273,10 @@
             </p>
           </div>
           <div class="d-flex gap-3 justify-content-center">
-            <a href="#"><img src="images/facebook.svg" alt="Facebook"></a>
-            <a href="#"><img src="images/instagram.svg" alt="Instagram"></a>
-            <a href="#"><img src="images/twitter-alt.svg" alt="Twitter"></a>
-            <a href="#"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://www.facebook.com/younohmedia"><img src="images/facebook.svg" alt="Facebook"></a>
+            <a href="https://www.instagram.com/younohmedia/"><img src="images/instagram.svg" alt="Instagram"></a>
+            <a href="https://www.tiktok.com/@younoh.media"><img src="images/tiktok.svg" alt="Twitter"></a>
+            <a href="https://www.linkedin.com/company/younoh-media/"><img src="images/linkedin.svg" alt="LinkedIn"></a>
             <!-- Uncomment below if you want to show WhatsApp -->
             <!-- <a href="#"><img src="./assets/img/icons/social-whatsapp.svg" width="50px" /></a> -->
           </div>
