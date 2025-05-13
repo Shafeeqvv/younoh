@@ -362,7 +362,6 @@ path {
     margin-bottom: 1rem;
 }
 
-
 .testimonials-slider ul {
     padding: 0;
 }
@@ -373,7 +372,6 @@ path {
 
 .testimonials-slider {
     position: relative;
-
     &:before,
     &:after {
         position: relative;
@@ -458,6 +456,7 @@ path {
     margin-bottom: 1rem;
     white-space: normal;
     word-wrap: break-word;
+    text-align: left;
 }
 
 .footer {
@@ -732,6 +731,22 @@ path {
         bottom: 67px;
         left: 760px;
     }
+}
+
+@media (min-width: 2560px) {
+    .underline-partner{
+        bottom: 67px;
+        left: 1400px;
+    }
+
+}
+
+@media (min-width: 3840px) {
+    .underline-partner{
+        bottom: 67px;
+        left: 2000px;
+    }
+
 }
 
 @media screen and (min-width: 320px) and (max-width: 540px){
