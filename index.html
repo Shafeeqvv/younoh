@@ -7,7 +7,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet" >
   <link rel="stylesheet" href="css/style.css">
   <link href="aos/dist/aos.css" rel="stylesheet">
-  
+
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
 
@@ -149,15 +149,57 @@
     <div class="container">
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-2 g-md-4 g-lg-5">
         <div class="col">
-          <div>
-            <div data-aos="zoom-in-up"><img src="images/client.svg"></div>
-            <h1>100+ Clients</h1>
-            <p>
-              Helping businesses
-              thrive through creative
-              digital solutions.
-            </p>
-          </div>
+            <div>
+              <div data-aos="zoom-in-up">
+                <img src="images/client.svg">
+              </div>
+              <h1><span id="client-count">0</span> Clients</h1>
+              <p>
+                Helping businesses
+                thrive through creative
+                digital solutions.
+              </p>
+            </div>
+            <script>
+              function animateCount(id, start, end, duration) {
+                const obj = document.getElementById(id);
+                let startTime = null;
+
+                function step(timestamp) {
+                  if (!startTime) startTime = timestamp;
+                  const progress = Math.min((timestamp - startTime) / duration, 1);
+                  obj.innerText = Math.floor(progress * (end - start) + start);
+
+                  if (progress < 1) {
+                    requestAnimationFrame(step);
+                  } else {
+                    obj.innerText = end + "+"; // Add '+' at the end
+                  }
+                }
+
+                requestAnimationFrame(step);
+              }
+
+              document.addEventListener("DOMContentLoaded", () => {
+                const target = document.getElementById("client-count");
+                let animated = false;
+
+                const observer = new IntersectionObserver(entries => {
+                  entries.forEach(entry => {
+                    if (entry.isIntersecting && !animated) {
+                      animateCount("client-count", 0, 100, 2000);
+                      animated = true; // Prevents it from triggering again
+                      observer.unobserve(target); // Stop observing
+                    }
+                  });
+                }, {
+                  threshold: 0.6 // Adjust depending on when you want it to trigger
+                });
+
+                observer.observe(target);
+              });
+            </script>
+
         </div>
         <div class="col">
           <div>
