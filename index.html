@@ -540,6 +540,25 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
   </section>
   <!-- testimonials slider end -->
+  <script>
+  // Only run below 992px
+  if (window.innerWidth < 992) {
+    const track = document.querySelector('.testimonials-slide-track');
+    let scrollAmount = 0;
+
+    function autoSlide() {
+      if (scrollAmount <= track.scrollWidth - track.clientWidth) {
+        scrollAmount += 1;
+        track.scrollLeft = scrollAmount;
+      } else {
+        scrollAmount = 0;
+        track.scrollLeft = 0;
+      }
+    }
+
+    setInterval(autoSlide, 30); // Adjust speed here (smaller = faster)
+  }
+</script>
 
 <!-- footer start -->
 <section class="footer">
