@@ -54,7 +54,14 @@
 
   <!-- hero secton start -->
   <section class="hero position-relative">
-    <video src="media/web_4.mp4" autoplay="" loop="" muted="" class="w-100 position-fixed top-0 start-0 hero-video"></video>
+<video 
+    src="media/web_4.mp4" 
+    autoplay 
+    loop 
+    muted 
+    playsinline 
+    class="w-100 position-fixed top-0 start-0 hero-video">
+</video>
     <div class="container hero-container">
       <div class="text-white text-center mt-5 d-flex flex-column justify-content-center align-items-center hero-position">
         <div class="overflow-hidden w-75 m-auto">
@@ -478,15 +485,10 @@ document.addEventListener("DOMContentLoaded", function () {
   <!-- testimonials slider start -->
   <section class="testimonials text-center" id="testimonial">
     <div>
-      <!-- <div class="testimonials-header d-flex flex-column gap-3">
-        <h1>What Our Clients Say</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </p>
-      </div> -->
-      <div class="testimonials-slider">
+        <h1 class="services-title pb-4">
+            <div data-aos="fade-up" data-aos-duration="2000">Testimonials</div>
+        </h1>
+        <div class="testimonials-slider">
         <ul class="testimonials-slide-track">
           <li class="testimonials-slide">
             <div>
@@ -649,5 +651,17 @@ document.addEventListener("DOMContentLoaded", function () {
   <script>
   AOS.init();
   </script>
+  <script>
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(function(link) {
+    link.addEventListener('click', function () {
+      var navbarToggler = document.querySelector('.navbar-toggler');
+      var navbarCollapse = document.querySelector('.navbar-collapse');
+
+      if (navbarToggler && window.getComputedStyle(navbarToggler).display !== 'none') {
+        new bootstrap.Collapse(navbarCollapse).hide();
+      }
+    });
+  });
+</script>
 
 </body></html>
