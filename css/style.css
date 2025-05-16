@@ -130,17 +130,71 @@ p{
     animation-play-state: running;
 }
 
+.zoom-in-animation {
+    animation: zoomInPage 1s ease-out forwards;
+}
+
+@keyframes zoomInPage {
+    from {
+        transform: scale(0.65);
+        opacity: 0;
+        transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    }
+    to {
+        transform: scale(1.10);
+        opacity: 1;
+    }
+}
+
+.main-content-container {
+    position: relative;
+    z-index: 1; /* Content above background */
+    min-height: 100vh; /* Ensure it takes at least full screen height */
+    background-color: #000;
+}
+
+.background-image-opacity-layer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* IMPORTANT: Replace placeholder URL below with your actual STATUE background image URL */
+    background-image: url(../images/statue.png);
+    /* "Reduced size" - shows whole image, may not cover all space */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* Fallback color for areas not covered by 'contain' - should match body or desired underlay */
+    background-color: #000;
+    opacity: 0.25; /* 32% opacity */
+    z-index: 0; /* Sits behind the main content */
+}
+
+/* Custom styling for heading line heights if needed beyond inline */
+.custom-heading {
+    font-size: 55px; /* from your snippet */
+    line-height: 40px; /* from your snippet */
+}
+/* Ensure paragraphs have good readability */
+.vision-container p {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+.vision-container h1 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+}
+
 .vision {
     position: relative;
     background-color: #000;
 }
 
-.vision-container {
-    padding: 7rem 0;
+/* .vision-container {
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
-    background-image: url(../images/logo-light.svg);
+    background-image: url(../images/statue.png);
+    background-size: contain;
+    opacity: 1;
 }
 
 .vision-container1 {
@@ -152,7 +206,7 @@ p{
 
 .vision-title {
     color: #FFE8E8;
-}
+} */
 
 .statatics {
     position: relative;
