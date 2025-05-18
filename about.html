@@ -64,10 +64,9 @@
   </nav>
   <!-- navbar end -->
 
-  <a href="#" class="social-icon">
+ <a href="https://wa.me/+971501392805" class="social-icon">
     <img src="images/social-whatsapp.svg" width="80%">
   </a>
-
   <!-- hero secton start -->
 <section class="hero position-relative img-back">
     <!--<video src="media/web_4.mp4" autoplay="" loop="" muted="" class="w-100 position-fixed top-0 start-0 hero-video"></video>-->
@@ -306,6 +305,16 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+</script>
+<script type="text/javascript">
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 0) {
+        navbar.classList.add('sticky');
+    } else {
+        navbar.classList.remove('sticky');
+    }
+});
 </script>
 </body>
 </html>

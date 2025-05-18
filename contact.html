@@ -161,7 +161,7 @@
   </nav>
   <!-- navbar end -->
 
-  <a href="#" class="social-icon">
+  <a href="https://wa.me/+971501392805" class="social-icon">
     <img src="images/social-whatsapp.svg" width="80%">
   </a>
 
@@ -359,6 +359,16 @@
       }
     });
   });
+</script>
+<script type="text/javascript">
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 0) {
+        navbar.classList.add('sticky');
+    } else {
+        navbar.classList.remove('sticky');
+    }
+});
 </script>
 </body>
 </html>

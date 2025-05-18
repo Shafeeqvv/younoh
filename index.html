@@ -155,38 +155,48 @@ document.addEventListener("DOMContentLoaded", function () {
   <!-- vision section start -->
   
 
-    <div class="main-content-container d-flex flex-column align-items-center justify-content-start p-3 p-sm-4 p-md-5" >
-      
-        <section class="vision w-100 zoom-in-animation">
-          <div class="background-image-opacity-layer"></div>
-            <div class="container vision-container">
-                <div class="row text-white align-items-center">
-                    <div class="col-12 col-md-5 mt-3 text-center text-md-end mb-4 mb-md-0" data-aos="zoom-in">
-                        <h1 class="custom-heading" style="margin-right: md-105px;">Our</h1> <h1 class="custom-heading">Mission</h1>
-                    </div>
-                    <div class="col-md-2 d-none d-md-block"></div> <div class="col-12 col-md-5 text-center text-md-start">
-                        <p>At Younoh Media, we don’t just market.. we ignite!
-                            We push the boundaries of creativity, fuse tech with imagination, and turn data into direction.
-                            Every campaign, every brand, every pixel is designed to make marketing the smartest, boldest
-                            investment our clients make. From digital marketing and media buying to AI driven strategies
-                            and branding, we build experiences that cut through the noise and spark real impact.</p>
-                    </div>
-                </div>
-
-                <div class="row text-white align-items-center" style="padding-top: 75px;">
-                    <div class="col-12 col-md-5 order-1 order-md-3 text-center text-md-start mb-3 mb-md-0" data-aos="zoom-in">
-                        <h1 class="custom-heading">Our</h1><h1 class="custom-heading">Vision</h1>
-                    </div>
-
-                    <div class="col-md-2 order-md-2 d-none d-md-block"></div>
-
-                    <div class="col-12 col-md-5 order-2 order-md-1 text-center text-md-end">
-                        <p>Turning marketing into our clients greatest competitive advantage, through bold creativity in everything we do.</p>
-                    </div>
+<section class="vision pb-5 pt-5 w-100">
+    <div class="container">
+        <div class="row text-white align-items-center">
+            <!-- Our Mission Text -->
+            <div class="col-12 col-md-6 mb-3 text-start order-1">
+                <h1 class="custom-heading text-center text-md-start" data-aos="zoom-in">Our Mission</h1>
+                <p style="text-align: justify;">
+                    At Younoh Media, we don’t just market.. we ignite!
+                    We push the boundaries of creativity, fuse tech with imagination, and turn data into direction.
+                    Every campaign, every brand, every pixel is designed to make marketing the smartest, boldest
+                    investment our clients make. From digital marketing and media buying to AI driven strategies
+                    and branding, we build experiences that cut through the noise and spark real impact.
+                </p>
+                <!-- Our Vision for md and larger (≥992px) -->
+                <div class="d-none d-md-block">
+                  <h1 class="custom-heading text-center text-md-start" data-aos="zoom-in">Our Vision</h1>
+                  <p style="text-align: justify;">
+                    Turning marketing into our clients' greatest competitive advantage,
+                    through bold creativity in everything we do.
+                  </p>
                 </div>
             </div>
-        </section>
+
+            <!-- Image (Center Column) -->
+            <div class="col-12 col-md-6 mb-3 order-2" data-aos="zoom-in">
+                <img src="images/statue.png" alt="Mission Image" class="img-fluid" style="opacity: 0.5;" />
+            </div>    
+
+            <div class="col-12 col-md-6 mb-3 order-2">
+              <div class="d-block d-md-none">
+                <h1 class="custom-heading text-center" data-aos="zoom-in">Our Vision</h1>
+                <p style="text-align: justify;">
+                  Turning marketing into our clients' advantage with bold creativity.
+                </p>
+              </div>
+            </div>        
+        </div>
     </div>
+</section>
+
+
+
 
   <!-- statatics section start -->
   <section class="statatics">
@@ -668,5 +678,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 </script>
-
+<script type="text/javascript">
+  window.addEventListener('scroll', function() {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 0) {
+        navbar.classList.add('sticky');
+    } else {
+        navbar.classList.remove('sticky');
+    }
+});
+</script>
 </body></html>
